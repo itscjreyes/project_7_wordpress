@@ -17,41 +17,50 @@ get_header();  ?>
 			<p><?php the_field('company_info') ?></p>
 		</div>
 	</div>
+
 	<div class="testimonial">
 		<div class="wrapper">
 			<p class="quote"><?php the_field('testimonial') ?></p>
 			<p class="quoteAuthor"><?php the_field('testimonial_author') ?></p>
 		</div>
 	</div>
+	
+	<div class="content">
+		<!-- <div class="wrapper"> -->
+			<?php the_content(); ?>
+		<!-- </div> -->
+	</div>
+
 	<div class="team">
 		<div class="teamText">
 			<h3>who we are</h3>
 		</div>
-		<figure class="teamImg teamImg1">
-			<?php $image1 = get_field('image1') ?>
-			<img src="<?php echo $image1['url'] ?>" alt="">
+		<figure class="teamImg teamImg1" style="background-image: url('<?php echo get_field('image1')['url'] ?>')">
 			<figcaption>
-				<h5></h5>
-				<p class="teamTitle"></p>
+				<div class="wrapper">
+					<h5><?php the_field('name1') ?></h5>
+					<p class="teamTitle"><?php the_field('title1') ?></p>
+				</div>
 			</figcaption>
 		</figure>
-		<figure class="teamImg teamImg2">
-			<?php $image2 = get_field('image2') ?>
-			<img src="<?php echo $image2['url'] ?>" alt="">
+		<figure class="teamImg teamImg2" style="background-image: url('<?php echo get_field('image2')['url'] ?>')">
 			<figcaption>
-				<h5></h5>
-				<p class="teamTitle"></p>
-			</figcaption>
+				<div class="wrapper">
+					<h5><?php the_field('name2') ?></h5>
+					<p class="teamTitle"><?php the_field('title2') ?></p>
+				</div>
+				</figcaption>
 		</figure>
-		<figure class="teamImg teamImg3">
-			<?php $image3 = get_field('image3') ?>
-			<img src="<?php echo $image3['url'] ?>" alt="">
+		<figure class="teamImg teamImg3" style="background-image: url('<?php echo get_field('image3')['url'] ?>')">
 			<figcaption>
-				<h5></h5>
-				<p class="teamTitle"></p>
+				<div class="wrapper">
+					<h5><?php the_field('name3') ?></h5>
+					<p class="teamTitle"><?php the_field('title3') ?></p>
+				</div>
 			</figcaption>
 		</figure>
 	</div>
+
 	<div class="workBanner">
 		<button><h3><a href="/project7/contact">work with us</a></h3></button>
 	</div>
