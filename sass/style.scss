@@ -1,5 +1,5 @@
 /*!
-* Theme Name: HackerYou Starter Theme
+* Theme Name: s
 * Theme URI: http://hackeryou.com;
 * Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
 * Version: 1.0
@@ -7,12 +7,16 @@
 * Author URI: http://hackeryou.com
 */
 
+@import 'variables';
 @import 'normalize';
 @import 'typography';
+@import 'header';
 @import 'navigation';
 @import 'sidebar';
 @import 'comments';
+@import 'about';
 @import 'footer';
+
 /*
 ====================================
 Default Styling
@@ -24,7 +28,7 @@ img {
 }
 
 body {
-	color: #333;
+	color: black;
 }
 
 .container {
@@ -41,6 +45,7 @@ body {
 .full {
 	width: 100%;
 }
+
 
 
 

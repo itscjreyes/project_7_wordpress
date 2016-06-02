@@ -1,0 +1,79 @@
+.about {
+	margin: 0;
+	width: 100%;
+
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 auto;
+	}
+
+	.wrapper {
+		padding: 15%;
+	}
+}
+
+.aboutInfo {
+	width: 50%;
+
+	h4 {
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		padding-bottom: 20px;
+	}
+}
+
+.testimonial {
+	width: 50%;
+	background-color: lightgrey;
+}
+
+.team {
+	width: 100%;
+	display: flex;
+	max-height: 300px;
+
+	.teamText {
+		width: 25%;
+		display: flex;
+		background-color: black;
+
+		h3 {
+			margin: auto;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			color: white;
+		}
+	}
+}
+
+.teamImg {
+	width: 25%;
+}
+
+.workBanner {
+	width: 100%;
+	display: flex;
+	background-color: $accentColor;
+	height: 100px;
+
+	button {
+		margin: auto;
+		border: 3px solid black;
+		color: black;
+		background-color: rgba(0,0,0,0);
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		padding: 5px 10px;
+
+		&:hover {
+			background-color: black;
+		}
+	}
+
+	button:hover a {
+		border-bottom: none;
+		color: $accentColor;
+	}
+}
+
