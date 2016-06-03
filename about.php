@@ -20,8 +20,9 @@ get_header();  ?>
 
 	<div class="testimonial">
 		<div class="wrapper">
-			<p class="quote"><?php the_field('testimonial') ?></p>
-			<p class="quoteAuthor"><?php the_field('testimonial_author') ?></p>
+			<i class="fa fa-quote-left"></i>
+			<p class="quoteText"><?php the_field('testimonial') ?></p>
+			<h5 class="quoteAuthor"><?php the_field('testimonial_author') ?></h5>
 		</div>
 	</div>
 	

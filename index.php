@@ -14,7 +14,7 @@
     					<p class="postDate"><?php the_time('F j, Y'); ?></p>
 	    				<h4><?php the_title(); ?></h4>
 	    				<p class="postExcerpt"><?php echo wp_trim_words( get_the_content(), 20, '...' ); ?></p>
-	    				<button><h4><a href="<?php the_permalink(); ?> ">Read More</a></h4></button>
+	    				<button><h4><a href="<?php the_permalink(); ?> ">Read More <i class="fa fa-long-arrow-right"></i></a></h4></button>
     				</article>
     			<?php 
     			}

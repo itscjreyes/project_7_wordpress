@@ -65,6 +65,42 @@ button:hover a {
 	color: $accentColor;
 }
 
+//HOME PAGE STYLES
+.main .content {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 180vh;
+	width: 100%;
+}
+
+.section {
+	width: 50%;
+	height: 50%;
+	background-color: lightgrey;
+	border: 1px solid black;
+}
+
+.section2,
+.section3,
+.section4,
+.section5 {
+	height: 25%;
+}
+
+.section4 {
+	display: flex;
+	flex-direction: row;
+}
+
+.subsection {
+	height: 100%;
+	width: 50%;
+	border: 1px solid black;
+}
+
+//BLOG STYLES
+
 .blog .content {
 	display: flex;
 	flex-wrap: wrap;
@@ -85,12 +121,20 @@ button:hover a {
 	button {
 		letter-spacing: 3px;
 		margin: 0;
+		border: none;
+		padding: 0;
 
-		&:hover {
-			background-color: $accentColor;
+		&:hover,
+		&:focus {
+			background-color: rgba(0,0,0,0);
 
 			a {
 				color: black;
+			}
+
+			.fa-long-arrow-right {
+				visibility: visible;
+				opacity: 1;
 			}
 		}
 	}
@@ -100,6 +144,13 @@ button:hover a {
 		font-size: 14px;
 		letter-spacing: 3px;
 	}
+	
+	.fa-long-arrow-right {
+		visibility: hidden;
+		opacity: 0;
+		color: $accentColor;
+		font-size: 20px;
+	}
 }
 
 .postDate {
@@ -107,6 +158,17 @@ button:hover a {
 	font-style: italic;
 	letter-spacing: 2px;
 	padding-bottom: 20px;
+	position: relative;
+
+	&:after {
+		content: "";
+		position: absolute;
+		width: 50px;
+		height: 3px;
+		background-color: $accentColor;
+		bottom: 25%;
+		left: 0;
+	}
 }
 
 .postExcerpt {
@@ -124,8 +186,8 @@ button:hover a {
 	}
 }
 
+//SINGLE POST STYLES
 
-
-
-
-
+.single a:hover {
+	border-bottom: 2px solid $accentColor;
+}

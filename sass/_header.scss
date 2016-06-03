@@ -17,8 +17,10 @@ header {
 		padding: 5px 10px;
 		text-transform: uppercase;
 		letter-spacing: 5px;
+		text-shadow: 1px 1px white;
 
-		&:hover {
+		&:hover,
+		&:focus {
 			background-color: $accentColor;
 			border: 3px solid black;
 		}
