@@ -1,0 +1,193 @@
+/*!
+* Theme Name: s
+* Theme URI: http://hackeryou.com;
+* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Version: 1.0
+* Author: HackerYou
+* Author URI: http://hackeryou.com
+*/
+
+@import 'variables';
+@import 'normalize';
+@import 'typography';
+@import 'header';
+@import 'navigation';
+@import 'sidebar';
+@import 'comments';
+@import 'about';
+@import 'footer';
+
+/*
+====================================
+Default Styling
+====================================
+*/
+
+img {
+	max-width: 100%;
+}
+
+body {
+	color: black;
+}
+
+.container {
+	margin: 0 auto;
+}
+
+.content {
+	float: left;
+	width: 65%;
+	margin-right: 5%;
+}
+
+.full {
+	width: 100%;
+}
+
+button {
+	display: block;
+	margin: auto;
+	border: 3px solid black;
+	color: black;
+	background-color: rgba(0,0,0,0);
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	padding: 5px 10px;
+
+	&:hover {
+		background-color: black;
+	}
+}
+
+button:hover a {
+	border-bottom: none;
+	color: $accentColor;
+}
+
+//HOME PAGE STYLES
+.main .content {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 180vh;
+	width: 100%;
+}
+
+.section {
+	width: 50%;
+	height: 50%;
+	background-color: lightgrey;
+	border: 1px solid black;
+}
+
+.section2,
+.section3,
+.section4,
+.section5 {
+	height: 25%;
+}
+
+.section4 {
+	display: flex;
+	flex-direction: row;
+}
+
+.subsection {
+	height: 100%;
+	width: 50%;
+	border: 1px solid black;
+}
+
+//BLOG STYLES
+
+.blog .content {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.blog-post {
+	width: 33.3%;
+	padding: 40px;
+	min-height: 250px;
+
+	&:nth-child(odd) {
+		background-color: #F5F5F5;
+	}
+
+	button {
+		letter-spacing: 3px;
+		margin: 0;
+		border: none;
+		padding: 0;
+
+		&:hover,
+		&:focus {
+			background-color: rgba(0,0,0,0);
+
+			a {
+				color: black;
+			}
+
+			.fa-long-arrow-right {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+
+	h4 {
+		text-transform: uppercase;
+		font-size: 14px;
+		letter-spacing: 3px;
+	}
+	
+	.fa-long-arrow-right {
+		visibility: hidden;
+		opacity: 0;
+		color: $accentColor;
+		font-size: 20px;
+	}
+}
+
+.postDate {
+	font-size: 14px;
+	font-style: italic;
+	letter-spacing: 2px;
+	padding-bottom: 20px;
+	position: relative;
+
+	&:after {
+		content: "";
+		position: absolute;
+		width: 50px;
+		height: 3px;
+		background-color: $accentColor;
+		bottom: 25%;
+		left: 0;
+	}
+}
+
+.postExcerpt {
+	min-height: 120px;
+	padding: 20px 0;
+}
+
+.morePosts {
+	padding: 50px 0;
+	display: flex;
+	margin: auto;
+
+	button:hover {
+		background-color: $accentColor;
+	}
+}
+
+//SINGLE POST STYLES
+
+.single a:hover {
+	border-bottom: 2px solid $accentColor;
+}
