@@ -2,8 +2,18 @@
 <?php get_header(); ?>
 
 <div class="blog">
+     <?php 
+        global $wp_query;
+        $pageID = $wp_query->queried_object_id;
+     ?>
+    <div class="smallHero" style="background-image: url('<?php echo get_field('hero_image', $pageID)['url'] ?>')">
+        <div class="heroText">
+            <strike>
+            <h2><?php the_field('full_title', $pageID)?></h2>
+            </strike>
+        </div>
+    </div>
   <div class="container">
-
     <div class="content">
     	<?php 
     		if( have_posts() ) {

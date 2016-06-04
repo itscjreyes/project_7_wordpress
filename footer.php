@@ -1,5 +1,9 @@
 <footer>
   <div class="container">
+  	<?php wp_nav_menu(array(
+  	'container' => 'nav',
+  	'theme_location' => 'footer'
+  	)) ?>
     <p>&copy; <?php echo date('Y'); ?></p>
   </div>
 </footer>

@@ -24,12 +24,17 @@
 		background: rgba(0,0,0,0);
 	}
 
+	input[type=search] {
+		width: 80%;
+	}
+
 	input.searchsubmit {
 		font-family: $fontTitle;
 		margin-top: 10px;
 		font-size: 14px;
 		text-transform: uppercase;
 		letter-spacing: 2px;
+		display: block;
 
 		&:hover {
 			background-color: $accentColor;

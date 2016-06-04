@@ -22,7 +22,8 @@ function theme_setup() {
 	* You can allow clients to create multiple menus by
   * adding additional menus to the array. */
 	register_nav_menus( array(
-		'primary' => 'Primary Navigation'
+		'primary' => 'Primary Navigation',
+		'footer' => 'Footer Nav'
 	) );
 
 	/*
@@ -61,7 +62,7 @@ function hackeryou_scripts() {
 	wp_deregister_script('jquery');
   wp_enqueue_script(
   	'jquery',
-  	"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js",
+  	"http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js",
   	false, //dependencies
   	null, //version number
   	true //load in footer
@@ -86,6 +87,12 @@ function hackeryou_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_scripts');
 
+function my_theme_add_scripts() {
+	wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false', array(), '3', true );
+	wp_enqueue_script( 'google-map-init', get_template_directory_uri() . '/js/google-maps.js', array('google-map', 'jquery'), '0.1', true );
+}
+ 
+add_action( 'wp_enqueue_scripts', 'my_theme_add_scripts' );
 
 /* Custom Title Tags */
 

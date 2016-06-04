@@ -13,7 +13,7 @@
 
 <body <?php body_class(); ?>>
 
-<header style="background-image: url('<?php echo get_field('hero_image')['url'] ?>')">
+<header>
   <div class="container">
     <h1>
       <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
@@ -26,10 +26,6 @@
       'theme_location' => 'primary'
     )); ?>
   </div> <!-- /.container -->
-  <div class="heroText">
-    <strike>
-      <h2><?php the_field('full_title')?></h2>
-    </strike>
-  </div>
+  
 </header><!--/.header-->
 

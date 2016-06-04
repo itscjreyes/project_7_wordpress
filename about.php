@@ -7,6 +7,13 @@
 get_header();  ?>
 
 <div class="about">
+	<div class="heroImg" style="background-image: url('<?php echo get_field('hero_image')['url'] ?>')">
+		<div class="heroText">
+			<strike>
+			<h2><?php the_field('full_title')?></h2>
+			</strike>
+		</div>
+	</div>
   <div class="container">
 	<?php // Start the loop ?>
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -30,6 +37,10 @@ get_header();  ?>
 		<!-- <div class="wrapper"> -->
 			<?php the_content(); ?>
 		<!-- </div> -->
+	</div>
+
+	<div class="workBanner">
+		<button><h3><a href="/project7/contact">get in touch</a></h3></button>
 	</div>
 
 	<div class="team">
@@ -62,9 +73,7 @@ get_header();  ?>
 		</figure>
 	</div>
 
-	<div class="workBanner">
-		<button><h3><a href="/project7/contact">work with us</a></h3></button>
-	</div>
+	
 
 	<?php endwhile; // end the loop?>
   </div> <!-- /.container -->
