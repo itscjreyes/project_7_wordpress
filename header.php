@@ -21,11 +21,16 @@
       </a>
     </h1>
 
-    <?php wp_nav_menu( array(
-      'container' => false,
-      'theme_location' => 'primary'
-    )); ?>
+    <nav>
+      <?php wp_nav_menu( array(
+        'container' => false,
+        'theme_location' => 'primary'
+      )); ?>
+    </nav>
+
+    <div class="menuIcon">
+      <i class="fa fa-ellipsis-v"></i>
+    </div>
   </div> <!-- /.container -->
-  
 </header><!--/.header-->
 

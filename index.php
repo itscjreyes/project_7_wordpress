@@ -6,7 +6,8 @@
         global $wp_query;
         $pageID = $wp_query->queried_object_id;
      ?>
-    <div class="smallHero" style="background-image: url('<?php echo get_field('hero_image', $pageID)['url'] ?>')">
+     <?php $smallHero = get_field('hero_image', $pageID) ?>
+    <div class="smallHero" style="background-image: url('<?php echo $smallHero['url'] ?>')">
         <div class="heroText">
             <strike>
             <h2><?php the_field('full_title', $pageID)?></h2>
@@ -30,9 +31,6 @@
     			}
     		}
     	 ?>
-		<div class="morePosts">
-			<button><h3>see more posts</h3></button>
-		</div>
     </div> <!--/.content -->
 
 

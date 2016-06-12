@@ -8,6 +8,7 @@ header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		position: relative;
 	}
 
 	h1 a {
@@ -16,11 +17,33 @@ header {
 		padding: 5px 10px;
 		text-transform: uppercase;
 		letter-spacing: 5px;
+		transition: all 0.2s ease;
 
 		&:hover,
 		&:focus {
 			background-color: $accentColor;
 			border: 3px solid black;
+		}
+	}
+
+	li a {
+		&:after {
+			content: "";
+			position: absolute;
+			width: 0;
+			height: 3px;
+			bottom: 0;
+			left: 0;
+			background-color: $accentColor;
+			transition: all 0.4s ease;
+		}
+
+		&:hover {
+			border-bottom: none;
+			
+			&:after {
+				width: 100%;
+			}
 		}
 	}
 

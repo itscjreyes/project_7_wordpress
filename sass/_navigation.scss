@@ -8,9 +8,21 @@ ul.menu {
 		display: inline;
 		margin-right: 10px;
 		a {
-			color: #333;
 			padding: 10px;
 			color: black;
+			position: relative;
+
 		}
+	}
+}
+
+.menuIcon {
+	display: none;
+	font-size: 40px;
+	padding: 0;
+	margin: 0 20px;
+	.fa {
+		padding: 20px 0 0;
+		margin: 0;
 	}
 }

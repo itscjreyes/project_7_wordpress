@@ -1,7 +1,8 @@
 <?php get_header();  ?>
 
 <div class="main">
-  <div class="heroImg" style="background-image: url('<?php echo get_field('hero_image')['url'] ?>')">
+  <?php $heroImg = get_field('hero_image') ?>
+  <div class="heroImg" style="background-image: url('<?php echo $heroImg['url'] ?>')">
     <div class="heroText">
       <strike>
         <h2><?php the_field('full_title')?></h2>
@@ -12,30 +13,6 @@
 
     <div class="content">
 
-      <figure class="section section1" style="background-image: url('<?php echo get_field('largeimg1')['url'] ?>')">
-        <figcaption>
-          <div class="wrapper">
-            <h5><?php the_field('caption1') ?></h5>
-          </div>
-        </figcaption>
-      </figure>
-
-      <figure class="section section2" style="background-image: url('<?php echo get_field('medimg1')['url'] ?>')">
-        <figcaption>
-          <div class="wrapper">
-            <h5><?php the_field('caption3') ?></h5>
-          </div>
-        </figcaption>
-      </figure>
-
-      <figure class="section section3" style="background-image: url('<?php echo get_field('medimg2')['url'] ?>')">
-        <figcaption>
-          <div class="wrapper">
-            <h5><?php the_field('caption4') ?></h5>
-          </div>
-        </figcaption>
-      </figure>
-
       <div class="section4">
         <div class="wrapper">
           <h2><?php the_field('tagline') ?></h2>
@@ -45,7 +22,8 @@
 
       <div class="section section5">
 
-        <figure class="subsection subsection1" style="background-image: url('<?php echo get_field('smallimg')['url'] ?>')">
+        <?php $smallImg = get_field('smallimg') ?>
+        <figure class="subsection subsection1" style="background-image: url('<?php echo $smallImg['url'] ?>')">
           <figcaption>
             <div class="wrapper">
               <h5><?php the_field('caption5') ?></h5>
@@ -57,7 +35,17 @@
 
       </div>
 
-      <figure class="section section6" style="background-image: url('<?php echo get_field('largeimg2')['url'] ?>')">
+      <?php $largeImg1 = get_field('largeimg1') ?>
+      <figure class="section section1" style="background-image: url('<?php echo $largeImg1['url'] ?>')">
+        <figcaption>
+          <div class="wrapper">
+            <h5><?php the_field('caption1') ?></h5>
+          </div>
+        </figcaption>
+      </figure>
+
+      <?php $largeImg2 = get_field('largeimg2') ?>
+      <figure class="section section6" style="background-image: url('<?php echo $largeImg2['url'] ?>')">
         <figcaption>
           <div class="wrapper">
             <h5><?php the_field('caption2') ?></h5>
@@ -65,13 +53,24 @@
         </figcaption>
       </figure>
 
-      <?php // Start the loop ?>
-      <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+      <?php $medImg1 = get_field('medimg1') ?>
+      <figure class="section section2" style="background-image: url('<?php echo $medImg1['url'] ?>')">
+        <figcaption>
+          <div class="wrapper">
+            <h5><?php the_field('caption3') ?></h5>
+          </div>
+        </figcaption>
+      </figure>
 
-        <!-- <h2><?php //the_title(); ?></h2> -->
-        <?php the_content(); ?>
+      <?php $medImg2 = get_field('medimg2') ?>
+      <figure class="section section3" style="background-image: url('<?php echo $medImg2['url'] ?>')">
+        <figcaption>
+          <div class="wrapper">
+            <h5><?php the_field('caption4') ?></h5>
+          </div>
+        </figcaption>
+      </figure>
 
-      <?php endwhile; // end the loop?>
     </div> <!-- /,content -->
 
   </div> <!-- /.container -->

@@ -1,7 +1,8 @@
 <?php get_header();  ?>
 
 <div class="contact">
-	<div class="smallHero" style="background-image: url('<?php echo get_field('hero_image')['url'] ?>')">
+	<?php $smallHero = get_field('hero_image') ?>
+	<div class="smallHero" style="background-image: url('<?php echo $smallHero['url'] ?>')">
 				<div class="heroText">
 						<strike>
 						<h2><?php the_field('full_title')?></h2>

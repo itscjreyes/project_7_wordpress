@@ -7,7 +7,8 @@
 get_header();  ?>
 
 <div class="about">
-	<div class="heroImg" style="background-image: url('<?php echo get_field('hero_image')['url'] ?>')">
+	<?php $heroImg = get_field('hero_image') ?>
+	<div class="heroImg" style="background-image: url('<?php echo $heroImg['url'] ?>')">
 		<div class="heroText">
 			<strike>
 			<h2><?php the_field('full_title')?></h2>
@@ -39,15 +40,13 @@ get_header();  ?>
 		<!-- </div> -->
 	</div>
 
-	<div class="workBanner">
-		<button><h3><a href="/project7/contact">get in touch</a></h3></button>
-	</div>
-
 	<div class="team">
 		<div class="teamText">
 			<h3>who we are</h3>
 		</div>
-		<figure class="teamImg teamImg1" style="background-image: url('<?php echo get_field('image1')['url'] ?>')">
+
+		<?php $team1 = get_field('image1') ?>
+		<figure class="teamImg teamImg1" style="background-image: url('<?php echo $team1['url'] ?>')">
 			<figcaption>
 				<div class="wrapper">
 					<h5><?php the_field('name1') ?></h5>
@@ -55,7 +54,9 @@ get_header();  ?>
 				</div>
 			</figcaption>
 		</figure>
-		<figure class="teamImg teamImg2" style="background-image: url('<?php echo get_field('image2')['url'] ?>')">
+
+		<?php $team2 = get_field('image2') ?>
+		<figure class="teamImg teamImg2" style="background-image: url('<?php echo $team2['url'] ?>')">
 			<figcaption>
 				<div class="wrapper">
 					<h5><?php the_field('name2') ?></h5>
@@ -63,7 +64,9 @@ get_header();  ?>
 				</div>
 				</figcaption>
 		</figure>
-		<figure class="teamImg teamImg3" style="background-image: url('<?php echo get_field('image3')['url'] ?>')">
+
+		<?php $team3 = get_field('image3') ?>
+		<figure class="teamImg teamImg3" style="background-image: url('<?php echo $team3['url'] ?>')">
 			<figcaption>
 				<div class="wrapper">
 					<h5><?php the_field('name3') ?></h5>
@@ -71,6 +74,10 @@ get_header();  ?>
 				</div>
 			</figcaption>
 		</figure>
+	</div>
+
+	<div class="workBanner">
+		<button><h3><a href="/project7/contact">get in touch</a></h3></button>
 	</div>
 
 	

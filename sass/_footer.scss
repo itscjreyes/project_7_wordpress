@@ -8,13 +8,24 @@ footer {
 		font-weight: bold;
 	}
 
-	ul.menu li a {
+	ul.menu li {
+		margin: auto;
+	}
+
+	ul li a {
 		letter-spacing: 2px;
-		padding: 0;
+		padding: 0 0 5px 0;
 		margin: 0;
+		transition: all .3s ease;
+
+		&:hover {
+			color: $accentColor;
+			border-bottom: none;
+		}
 	}
 
 	p {
 		font-family: $fontTitle;
+		padding-top: 5px;
 	}
 }
