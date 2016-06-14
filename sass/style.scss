@@ -510,7 +510,7 @@ button:hover a {
 		transition: all 0.4s ease;
 
 		ul.menu {
-			margin: 30px auto;
+			margin: auto;
 
 			li {
 				display: block;
@@ -530,6 +530,7 @@ button:hover a {
 		opacity: 1;
 		bottom: -40vh;
 		top: -25%;
+		display: flex;
 	}
 
 	.main .content {
